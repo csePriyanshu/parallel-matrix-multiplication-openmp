@@ -1,12 +1,13 @@
+# Parallel Matrix Multiplication and Convolution
+This repository contains a C++ program that demonstrates parallelized matrix multiplication and convolution using OpenMP. The goal is to compare the performance of sequential and parallel executions, providing insights into the efficiency of parallel computing for matrix operations.
 
-# Parallel Matrix Multiplication with OpenMP
-
-This repository contains a C++ program that implements matrix multiplication using both sequential and parallel approaches. The parallel version uses OpenMP to demonstrate the impact of multi-threading on performance across different matrix sizes.
 
 ## Features
-- Matrix multiplication for square matrices of sizes: `10x10`, `50x50`, `100x100`, `500x500`.
-- Comparison of sequential and parallel execution using multiple thread counts: `1, 2, 4, 8`.
-- Timing results displayed in milliseconds (ms) with two decimal precision.
+- Implements sequential and parallel matrix multiplication.
+- Implements sequential and parallel convolution methods.
+- Measures execution time for different matrix sizes (10x10, 50x50, 100x100, and 500x500).
+- Compares performance across various thread configurations (1, 2, 4, and 8 threads).
+- Outputs execution time in milliseconds with two decimal precision.
 
 ## Files
 - **matrix_multiplication_openmp.cpp**: The main program implementing both sequential and parallel matrix multiplication.
@@ -36,33 +37,56 @@ The program will output the time taken (in milliseconds) for both sequential and
 
 ```
 Matrix Size: 10x10
-Sequential time taken: 0.01 ms
-Parallel (1 threads) version time taken: 0.02 ms
-Parallel (2 threads) version time taken: 0.35 ms
-Parallel (4 threads) version time taken: 0.13 ms
-Parallel (8 threads) version time taken: 0.21 ms
+Sequential time taken: 0.03 ms
+Parallel (1 threads) version time taken: 0.16 ms
+Parallel (2 threads) version time taken: 0.15 ms
+Parallel (4 threads) version time taken: 0.16 ms
+Parallel (8 threads) version time taken: 0.85 ms
+--------------------------
+Sequential Convolution time taken: 0.01 ms
+Parallel Convolution (1 threads) version time taken: 0.02 ms
+Parallel Convolution (2 threads) version time taken: 0.01 ms
+Parallel Convolution (4 threads) version time taken: 0.20 ms
+Parallel Convolution (8 threads) version time taken: 7.43 ms
 --------------------------
 Matrix Size: 50x50
-Sequential time taken: 2.91 ms
-Parallel (1 threads) version time taken: 2.27 ms
-Parallel (2 threads) version time taken: 0.93 ms
-Parallel (4 threads) version time taken: 1.36 ms
-Parallel (8 threads) version time taken: 8.62 ms
+Sequential time taken: 2.12 ms
+Parallel (1 threads) version time taken: 2.24 ms
+Parallel (2 threads) version time taken: 1.61 ms
+Parallel (4 threads) version time taken: 1.82 ms
+Parallel (8 threads) version time taken: 1.28 ms
+--------------------------
+Sequential Convolution time taken: 0.58 ms
+Parallel Convolution (1 threads) version time taken: 0.51 ms
+Parallel Convolution (2 threads) version time taken: 0.22 ms
+Parallel Convolution (4 threads) version time taken: 0.46 ms
+Parallel Convolution (8 threads) version time taken: 0.30 ms
 --------------------------
 Matrix Size: 100x100
-Sequential time taken: 22.24 ms
-Parallel (1 threads) version time taken: 13.12 ms
-Parallel (2 threads) version time taken: 5.91 ms
-Parallel (4 threads) version time taken: 6.94 ms
-Parallel (8 threads) version time taken: 11.23 ms
+Sequential time taken: 18.81 ms
+Parallel (1 threads) version time taken: 12.42 ms
+Parallel (2 threads) version time taken: 10.76 ms
+Parallel (4 threads) version time taken: 4.99 ms
+Parallel (8 threads) version time taken: 4.61 ms
+--------------------------
+Sequential Convolution time taken: 1.76 ms
+Parallel Convolution (1 threads) version time taken: 3.69 ms
+Parallel Convolution (2 threads) version time taken: 2.14 ms
+Parallel Convolution (4 threads) version time taken: 0.99 ms
+Parallel Convolution (8 threads) version time taken: 7.02 ms
 --------------------------
 Matrix Size: 500x500
-Sequential time taken: 1322.49 ms
-Parallel (1 threads) version time taken: 1464.83 ms
-Parallel (2 threads) version time taken: 1001.15 ms
-Parallel (4 threads) version time taken: 620.36 ms
-Parallel (8 threads) version time taken: 543.81 ms
+Sequential time taken: 1311.48 ms
+Parallel (1 threads) version time taken: 1445.82 ms
+Parallel (2 threads) version time taken: 747.21 ms
+Parallel (4 threads) version time taken: 562.73 ms
+Parallel (8 threads) version time taken: 560.61 ms
 --------------------------
+Sequential Convolution time taken: 37.76 ms
+Parallel Convolution (1 threads) version time taken: 25.32 ms
+Parallel Convolution (2 threads) version time taken: 16.97 ms
+Parallel Convolution (4 threads) version time taken: 15.61 ms
+Parallel Convolution (8 threads) version time taken: 13.07 ms
 ```
 
 ## Performance Analysis
